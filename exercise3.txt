@@ -15,8 +15,18 @@ alert('The total of the two numbers is: ' + sum);
 // BONUS: Make a program that can subtract, multiply, and also divide!
 
 var firstNum = prompt('Please insert your first Number');
-var operator = prompt('Please insert your choice of operator');
+var operator = prompt('Enter operator ( either +, -, * or / ): ');
 var secondNum = prompt('Please insert your second Number');
-var sum = Number(firstNum) + operator + Number(secondNum);
-alert('The total of the two numbers is: ' + sum);
-//Incomplete - still Need to do
+let result;
+
+if( operator == '+' ) {
+    result = firstNum + secondNum;
+} else if (operator == '-') {
+    result = firstNum - secondNum;
+} else if (operator == '*') {
+    result = firstNum * secondNum;
+} else {
+    result = firstNum / secondNum;
+}
+
+alert('The total of the two numbers is: ' + result);
